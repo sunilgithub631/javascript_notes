@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+
+            //1.Object literal
+            emp={id:101,name:'sunil',salary:'20k'}
+            document.writeln(emp.id+","+emp.name+","+emp.salary)
+            document.write('<br>')
+            //2.By creating a object using new keyword
+            emp1=new Object({id:101,name:'sunil',salary:'20k'})
+            document.write(emp1.id+","+emp1.name+","+emp1.salary)
+            document.write('<br>')
+            //3.By using Object constructor
+            function Employee(id,name,salary){
+                this.id=id
+                this.name=name
+                this.salary=salary
+                this.changeSalary=changeSalary
+                function changeSalary(Othersalary){
+                    this.salary=Othersalary
+                }
+            }
+            e=new Employee(1,'sunil','20K')
+            e.changeSalary('40k')
+            document.write(e.id+","+e.name+","+e.salary);
+
+            //Representing objects in table format
+            var mobile={
+        name:'IPhone 13',
+        color:'black',
+        price:'70K',
+        type:'5G',
+        sim:'JIO',
+        condition:'working',
+        storage:'128GB'
+    }
+    console.table(mobile);
+
+    //defining methods inside Object
+    var user={
+        firstName:'sunil',
+        lastName:'kumar',
+        role:'intern',
+        loginCount:2,
+        facebookLogin:true,
+        coursesList:[],
+        buyCourse:function(courseName){
+            this.coursesList.push(courseName)
+        },
+        getCourseCount:function(){
+            console.log(`${this.firstName} is enrolled in total of ${this.coursesList.length}`);
+        },
+        userInfo:function(){
+            console.log(`${this.firstName} ${this.lastName} ${this.role} ${this.loginCount }${this.facebookLogin}${this.coursesList}`);
+        }
+    }
+    user.buyCourse('JavaScript')
+    user.buyCourse('Angular course')
+    user.buyCourse('React JS')
+    user.userInfo()
+    </script>
+</body>
+</html>
