@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //Destructuring 
+var arr=[10,20,30,40]
+let [a,b,...rest]=arr
+console.log(a);
+console.log(b);
+console.log(rest);
+        
+        //Spread Operator
+        let obj1={
+            name:'sunil',
+            company:'company xyz',
+            city:'vijayawada'
+        }
+        let obj2={...obj1,name:'aman'}         //spread syntax has to be first while spreading
+        let obj3={name:'aman',...obj1}       //here spread syntax wont work because the spread syntax has to be first in the list
+        console.log(obj2);
+        console.log(obj3);
+
+
+        const array = [1, 2, 3];
+const obj = { ...array }; // { 0: 1, 1: 2, 2: 3 }
+       console.log(obj);
+
+        let date=[2023,01,16]
+        const s=new Date(...date)
+        console.log(s);
+
+
+
+
+    </script>
+</body>
+</html>

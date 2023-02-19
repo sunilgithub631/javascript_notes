@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+            async function display(){
+
+                let delhiWeather=new Promise((resolve,reject)=>{
+                    setTimeout(()=>{
+                       resolve("27deg") 
+                    },1000)
+                })
+                let bangaloreWeater=new Promise((resolve,reject)=>{
+                    setTimeout(()=>{
+                       resolve("22deg") 
+                    },2000)
+                })
+
+
+                // delhiWeather.then(alert)
+                // bangaloreWeater.then(alert)
+                console.log('weathers:');
+                let delhiW=await delhiWeather;
+                console.log('Fetched delhi weather',delhiW)
+                let bangaloreW= await bangaloreWeater
+                console.log('Fectching bamgalore weather',bangaloreW)
+                return [delhiW,bangaloreW]
+
+            }
+            display()
+
+            console.log('Weathers');
+
+
+    </script>
+</body>
+</html>

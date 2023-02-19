@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Colors</title>
+</head>
+<body>
+    <select  id="color" onchange="display()">
+    <option value="select color">Select color</option>
+    <option value="red">Red</option>
+    <option value="green">Green</option>
+    <option value="yellow">Yellow</option>
+</select>
+<script type="text/javascript">
+     
+    function display(){
+        var value=document.getElementById("color").value
+        if(value!="select color"){
+            document.bgColor=value;
+            document.cookie="color="+value
+        }
+    }
+    window.onload=function(){
+        if(document.cookie.length!=0){
+            var array=document.cookie.split("=")
+            document.getElementById("color")=array[1]
+            document.bgColor=array[1]
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

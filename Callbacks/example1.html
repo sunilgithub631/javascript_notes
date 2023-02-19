@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        function showData(name,amount){
+            document.write(`name:${name} `)
+            document.write(`amount:${amount}`)
+        }
+        function insertDara(callback){
+            let name=prompt('enter the name')
+            let amount=prompt('Enter the amount')
+            callback(name,amount)
+        }
+    insertDara(showData)
+
+    </script>
+</body>
+</html>

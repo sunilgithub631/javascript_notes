@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        //constructor method in javascript
+        //1.constructor keyword is used to declare the constructor method 2.class can contain one constructor 3.parent class constructor nby super keyword
+        class EmployeeCompany {
+            constructor(){
+                this.company='epikindifi'
+            }
+        }
+        class Employee extends EmployeeCompany{
+
+            constructor(id,name){
+                super()
+                this.id=id;
+                this.name=name;
+            }
+           getDetails(){
+            console.log(this.id,this.name,this.company);
+           }
+        }
+        var emp=new Employee(1,'sunil')
+       emp.getDetails()
+
+      
+    </script>
+</body>
+</html>

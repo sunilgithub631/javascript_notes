@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        let promise=()=>{
+            return setTimeout(()=>{
+                console.log('Promise setTimeOut is running..............');
+            },2000)
+        }
+
+        //IIFE-Immediately Invoked Function expression is a javascript function that runs as soon as it is defined
+       (async()=>{
+        let a=await promise()
+        console.log(a);
+        let b=await promise()
+        console.log(b);
+       })()
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

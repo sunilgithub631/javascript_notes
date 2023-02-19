@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <script>
+
+        class Moment{
+            display(){
+                console.log('Moment class');
+            }
+        }
+        class M extends Moment{
+            display(){
+                console.log('M class');
+            }
+        }
+        var m1=new M()
+        m1.display()
+
+        //Prototype
+        function A(){
+
+        }
+    A.prototype.display=function(){
+        console.log('A class');
+    }
+    function B(){
+
+    }
+   B.prototype=Object.create(A.prototype)
+    var b=new B()
+    b.display()            //error
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+                function Employee(firstName,LastName){
+                        this.firstName=firstName
+                        this.LastName=LastName
+                        this.friends=[]
+                        this.getDetails=()=>{
+                            console.log(this.firstName,this.LastName);
+                        }
+                }
+                
+                Employee.prototype.salary
+                Employee.prototype.friends=[]
+                Employee.prototype.getFullDetails=function(){
+                    console.log(this.firstName,this.LastName,this.salary,this.friends);
+                }
+                var obj1=new Employee('sunil','kumar')
+                obj1.salary=10000
+                obj1.friends.push('jsh','oiufhgd')
+                var obj2=new Employee('varun','kumar')
+                obj2.salary=10000
+                obj2.friends.push('hr','cbd')
+                console.log(obj1)
+                console.log(obj2)
+                // obj1.getFullDetails()
+                // obj2.getFullDetails()
+                obj1.getDetails()
+                
+                
+                </script>
+</body>
+</html>

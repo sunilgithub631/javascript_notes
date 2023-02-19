@@ -1,0 +1,15 @@
+#container,body{
+    background-color: red;
+    
+}
+#clock{
+   text-align: center;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: x-large;
+   color: #0ca0148a;
+   box-shadow: none;
+   border: 2px solid orange;
+  margin: 20px;
+  padding: 10px;
+  background-color: blueviolet;
+}

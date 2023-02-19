@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+            //Encapsulatiion
+        //     class Employeee{
+
+        //         constructor(){
+        //             var id;
+        //             var name;
+        //         }
+        //         getId(){
+        //             return this.id;
+        //         }
+        //         setId(id){
+        //             this.id=id;
+        //         }
+        //         getName(){
+        //             return this.name;
+        //         }
+        //         setName(name){ this.name=name;}
+        //     }
+
+        //  let emp1=new Employeee()
+        //  emp1.setId(1);
+        //  emp1.setName('sunil')
+        //  ename=emp1.getName()
+        //  console.log("name:",ename);
+        //  console.log(emp1)
+        //  emp2=new Employeee()
+        //  emp2.setId(emp1.getId())
+        //  emp2.setName(emp1.getName)
+        //  ename=emp2.getId()
+        //     console.log("id",ename);
+
+    //  class Student{
+    //     constructor(){
+    //         var name
+    //         var marks
+    //     }
+    //     setName(name){
+    //         this.name=name
+    //     }
+    //     getName() {
+    //         return this.name
+    //     }
+    //     setMarks(marks){
+    //         if(marks<0 ||marks>100) alert("invalid marks")
+    //             else this.marks=marks
+    //     }
+    //     getMarks(){
+    //         return this.marks
+    //     }
+    //  }
+    //  let s1=new Student()
+    //  s1.setName('sunil')
+    //  s1.setMarks(102)
+    //  document.write(s1.getName(),s1.getMarks())
+    //  let s2=new Student()
+    //  s2.setMarks(40)
+    //  s2.setName('SAM')
+    //  s1.getMarks()
+
+    //Prototype Based Approach
+        function Student(id,name){
+           var id=id
+         var name=name
+            Object.defineProperty(this,"id",{
+                get:function(){
+                    return this.id
+                },
+                set:function(id){
+                    this.id=id
+                }
+            })
+            Object.defineProperty(this,"name",{
+                get:function(){
+                    return this.name
+                },
+                set:function(){
+                    this.name=name;
+                }
+            })
+        }
+        var s1=new Student(1,'sunil')
+        console.log(s1);
+    </script>
+</body>
+</html>

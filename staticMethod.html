@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <script>
+        //static Methods
+    //     class Text{
+    //         //static method
+    //         static display(){
+    //             return 'text class display method'
+    //         }
+    //         static display2(){
+    //             //calling static method inside static method
+    //             this.display()
+    //             return 'display method '
+    //         }
+    //         //calling static method inside non static method
+    //         nothing(){
+    //             console.log(Text.display());
+    //         }
+    //     }
+    //     //creating instance to call non static method
+    //     var text=new Text()
+    //   text.nothing()
+        
+
+        class Animal{
+
+            constructor(name){
+                this.name=Animal.captilize(name)   //we can also call capitalize static method like this
+            }
+            static captilize(name){
+                return name.charAt(0).toUpperCase()+name.substr(1,name.length)
+            }
+            walk(){
+                alert(`${this.name} is walking`)
+            }
+
+        }
+            var tiger=new Animal(Animal.captilize('tiger'))   //we can done like this
+            tiger.walk()
+            const capital=Animal.captilize('tiger')
+            console.log(capital);
+    </script>
+</body>
+</html>

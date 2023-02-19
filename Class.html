@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    
+    <script>
+            //class is a type of function 
+            //defining of class can be done like function declaration and function ec=xpression
+            /*1.Class Declaration and Class Expression*/
+
+            //1.Class Declaration
+             class Employee{
+
+                constructor(id,name,salary){
+                    this.id=id;
+                    this.name=name;
+                    this.salary=salary;
+                }
+                detail(){
+                    document.write(this.id+","+this.name+","+this.salary)
+                }
+             }
+          e1=new Employee(1,'sunil','20k')
+          e1.detail()
+          document.write('<br>')
+          e2=new Employee(2,'aman','25k')
+          e2.detail()
+          document.write('<br>')
+        //2.Class Expression
+        var emp=class Emp{
+
+
+            constructor(id,name){
+                this.id1=id;
+                this.name1=name;
+            }
+            details(){
+                document.write(this.id1+","+this.name1)
+            }
+        }
+        e3=new emp(3,'Ankit')
+        e3.details()
+        document.write('<br>')
+        e4=new emp(4,'ccvfds')
+        e4.details()
+
+
+
+
+    </script>
+
+</body>
+</html>

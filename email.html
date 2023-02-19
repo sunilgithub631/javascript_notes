@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <form name="emailValidate" method="post" action="#" onsubmit=" return checkEmail();">
+    Email:<input type="text" placeholder= "Enter the email" name="email" ><br>
+    <input type="submit" >
+</form>
+<script>
+
+    function checkEmail(){
+         var emai=document.emailValidate.email.value
+          var atPositon=emai.indexOf("@")
+         var  atPoint=emai.lastIndexOf(".")
+         if(atPositon<1 ||atpoint<atPositon+2||atPoint+2>=emai.length) {document.write('Invalid email'); return false;}
+             else{ document.write('Valid user email');return true;}
+     }
+ </script>
+</body>
+</html>

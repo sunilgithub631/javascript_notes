@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        class M extends Date{
+             constructor(){
+                super()
+                
+             }
+        }
+        var m=new M()
+        console.log(m.getDate(),m.getDay(),m.getFullYear());
+
+        class Moment extends Date{
+            constructor(year){
+                super(year)
+            }
+        }
+        var mo=new Moment("February 13 2023, 12:58:10")
+       console.log(mo.getMinutes());
+       console.log(mo.getDay());
+       console.log(mo.getDate());
+       console.log(mo.getFullYear());
+
+
+
+        class Bike{
+            constructor()
+            {
+                this.company="Yamaha"
+            }
+        }
+        class Vehicle extends Bike{
+            constructor(name,price){
+                super()
+                this.name=name;
+                this.price=price;
+            }
+        }
+        var sunil=new Vehicle('R15','3M')
+        console.log(sunil.company,sunil.name,sunil.price);
+
+
+        //prototype
+        function Employee(){
+
+           
+                this.job="intern"
+            
+        }
+        Employee.prototype.getJob=function(){
+            return this.job
+        }
+        function Sunil (id,salary){
+                this.id=id;
+                this.salary=salary;
+        }
+
+        var e=new Employee();
+         Sunil.prototype=e
+         var s=new Sunil(11,'20K')
+        console.log(s);
+
+
+       class Bank{
+        intrest(){
+            return 0;
+        }
+       }
+       class Punjb extends Bank{
+        intrest(){
+            return 7
+        }
+       }
+       class SBI extends Bank{
+        intrest(){
+            return 8
+        }
+       }
+       var iint=new Punjb()
+       console.log(iint.intrest() );
+
+        class Animal
+        {
+            constructor(name){
+                this.name=name
+            }
+            eat(){
+                console.log(`${this.name} is eating`);
+            }
+        }
+        class Dog extends Animal{
+           constructor(name,age){
+            super()
+            this.name=name
+            this.age=age
+           }
+            shout(){
+                console.log(`${this.name} is shouting and his age is ${this.age}`);
+            }
+        }
+            var ani=new Dog('tommy',7)
+            ani.shout()
+
+    </script>
+</body>
+</html>

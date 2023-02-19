@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <form action="#" name="validate" method="post" onsubmit="return validate();">
+
+        <table>
+            <tr><td>
+                Enter name: </td><td><input type="text" id="name"><br>
+            <span id="nameloc"></span>
+            </td></tr>
+               <tr><td> Enter password:</td><td><input type="password" id="password">
+                <span id="passloc"></span></td></tr>
+            <tr><td><input type="submit" ></td></tr>
+        </table>
+    </form>
+    <script>
+
+        function validate(){
+
+            var name=document.validate.name.value
+            var passsword=document.validate.passsword.value
+            var status=true
+            if(name==="" ||name.length<1){
+                document.getElementById("nameloc").innerHTML=" <img src='https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Ffail-gifs&psig=AOvVaw0V_BZJINzqSCcL2dhzltno&ust=1676383744504000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCNikrZ7Wkv0CFQAAAAAdAAAAABAE'/> Please enter your name"
+                status=false;
+            }else{
+                document.getElementById("nameloc").innerHTML=" <img src='https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Fpass-gifs&psig=AOvVaw1st9ETHPiAkoI8a2VICC8r&ust=1676383803975000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLjV5brWkv0CFQAAAAAdAAAAABAE'/>"
+                status=true
+            }
+            if(passsword.length<6){
+                document.getElementById("passloc").innerHTML=" <img src='https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Ffail-gifs&psig=AOvVaw0V_BZJINzqSCcL2dhzltno&ust=1676383744504000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCNikrZ7Wkv0CFQAAAAAdAAAAABAE'/>Password must be at least 6 char long"
+                status=false;
+            }else{
+                document.getElementById("passloc").innerHTML=" <img src='https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Fpass-gifs&psig=AOvVaw1st9ETHPiAkoI8a2VICC8r&ust=1676383803975000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLjV5brWkv0CFQAAAAAdAAAAABAE'/>"
+                status=true;
+            }
+            return true;
+        }
+
+    </script>
+</body>
+</html>

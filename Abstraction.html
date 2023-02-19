@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        //creating a constructor function
+        function Vehicle(){
+            this.vehicleName="vehicleName"
+            throw new Error('you cannot create an instance ')
+        }
+        Vehicle.prototype.display=function(){
+            console.log(this.vehicleName);
+        }
+        function Bike(vehicleName){
+            this.vehicleName=vehicleName
+        }
+        //we cannot create an instance of an abstract class
+    //    Bike.prototype=Object.create(Vehicle.prototype)
+        var b=new Vehicle()
+        b.display()
+        // var bike=new Bike("Yamaha")
+        // bike.display()
+
+
+    
+
+
+    </script>
+</body>
+</html>
