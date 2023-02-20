@@ -3,9 +3,11 @@
 // console.log(value);
 
 "use strict";
-function greet(){
+// function greet(){
   
-     string='hello'
-    console.log(string);
-}
-greet()
+//      string='hello'
+//     console.log(string);
+// }
+// greet()
+// let arguments ='dnbv'  //arguments and eval as variable names are not allowed in strict mode because that both are reserved keywords
+// let eval='sunil'

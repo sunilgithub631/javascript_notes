@@ -6,3 +6,4 @@ function salutation(callback){
     callback(name)
 }
 salutation(greeting)
+console.log("hye");
